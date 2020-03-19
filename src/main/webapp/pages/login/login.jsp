@@ -15,7 +15,7 @@
 <body class="hold-transition login-page" style="background:#000; color:#FFF">
 <div class="login-box">
     <div class="login-logo">
-        <a href="all-admin-index.html"><h1 style="color:#FFF">客户关系管理系统</h1></a>
+        <a href="all-admin-index.html"><h1 style="color:#FFF">客户宽带管理系统</h1></a>
     </div>
     <div class="login-box-body">
         <form action="${pageContext.request.contextPath}/login.do" method="post">

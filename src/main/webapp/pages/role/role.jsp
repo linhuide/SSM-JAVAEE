@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>角色管理页面</title>
+    <title>权限管理页面</title>
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
@@ -41,13 +41,13 @@
         <!-- 内容头部 -->
         <section class="content-header">
             <h1>
-                角色管理
-                <small>角色列表</small>
+                权限管理
+                <small>权限列表</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="${pageContext.request.contextPath}/login/main.do"><i class="fa fa-dashboard"></i>首页</a></li>
-                <li><a href="#">角色管理</a></li>
-                <li class="active">角色列表</li>
+                <li><a href="#">权限管理</a></li>
+                <li class="active">权限列表</li>
             </ol>
         </section>
         <!-- 内容头部 /-->
@@ -56,7 +56,7 @@
             <!-- .box-body -->
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">角色列表</h3>
+                    <h3 class="box-title">权限列表</h3>
                 </div>
                 <div class="box-body">
                     <!-- 数据表格 -->
@@ -66,9 +66,9 @@
                             <div class="form-group form-inline">
                                 <div class="btn-group">
                                     <!--新建-->
-                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#newDialog" onclick="clear1()">
-                                        <i class="fa fa-file-o"></i>新建
-                                    </button>
+<%--                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#newDialog" onclick="clear1()">--%>
+<%--                                        <i class="fa fa-file-o"></i>新建--%>
+<%--                                    </button>--%>
                                     <!--刷新-->
                                     <button type="button" class="btn btn-default" title="刷新" onclick="location.reload();">
                                         <i class="fa fa-refresh"></i>刷新
@@ -117,45 +117,45 @@
         </section>
     </div>
     <!-- 新建模态框 -->
-    <div class="modal fade" id="newDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">新建角色信息</h4>
-                </div>
+<%--    <div class="modal fade" id="newDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">--%>
+<%--        <div class="modal-dialog" role="document">--%>
+<%--            <div class="modal-content">--%>
+<%--                <div class="modal-header">--%>
+<%--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
+<%--                        <span aria-hidden="true">&times;</span>--%>
+<%--                    </button>--%>
+<%--                    <h4 class="modal-title" id="myModalLabel">新建角色信息</h4>--%>
+<%--                </div>--%>
 
-                <div class="modal-body">
-                    <form class="form-horizontal" id="insertform">
+<%--                <div class="modal-body">--%>
+<%--                    <form class="form-horizontal" id="insertform">--%>
 
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">角色名字</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="角色名字" name="roleid" id="roleid1">
-                            </div>
-                        </div>
+<%--                        <div class="form-group">--%>
+<%--                            <label class="col-sm-2 control-label">角色名字</label>--%>
+<%--                            <div class="col-sm-10">--%>
+<%--                                <input type="text" class="form-control" placeholder="角色名字" name="roleid" id="roleid1">--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
 
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">角色描述</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" rows="3" placeholder="角色描述" name="roleDesc" id="roleDesc1"></textarea>
-                            </div>
-                        </div>
+<%--                        <div class="form-group">--%>
+<%--                            <label class="col-sm-2 control-label">角色描述</label>--%>
+<%--                            <div class="col-sm-10">--%>
+<%--                                <textarea class="form-control" rows="3" placeholder="角色描述" name="roleDesc" id="roleDesc1"></textarea>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
 
 
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary"
-                            onclick="create1('${pageContext.request.contextPath}/role')">创建角色信息
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+<%--                    </form>--%>
+<%--                </div>--%>
+<%--                <div class="modal-footer">--%>
+<%--                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>--%>
+<%--                    <button type="button" class="btn btn-primary"--%>
+<%--                            onclick="create1('${pageContext.request.contextPath}/role')">创建角色信息--%>
+<%--                    </button>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
 
     <!-- 修改模态框 -->
     <div class="modal fade" id="updateDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabe2">
@@ -174,7 +174,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">角色名字</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="角色名字" name="roleid" id="roleid2">
+                                <input type="text" class="form-control" placeholder="角色名字" name="roleid" id="roleid2" disabled="disabled">
                             </div>
                         </div>
 
